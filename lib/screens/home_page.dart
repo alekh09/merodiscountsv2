@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                   Expanded(
                     child: ResponsiveText(
                         kLocation,
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
                   ),

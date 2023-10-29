@@ -19,6 +19,13 @@ class _AssetsSvgImagesGen {
   String get green_button => '$kSvgImagesPath/green_button.svg';
   String get redbutton => '$kSvgImagesPath/redbutton.svg';
   String get ratingreen => '$kSvgImagesPath/ratinggreen.svg';
+  String get coupon => '$kSvgImagesPath/coupon.svg';
+  String get showmore => '$kSvgImagesPath/showmore.svg';
+  String get invitefriends => '$kSvgImagesPath/invite.svg';
+  String get about => '$kSvgImagesPath/about.svg';
+  String get policies => '$kSvgImagesPath/policies.svg';
+  String get faq => '$kSvgImagesPath/faq.svg';
+  String get settings => '$kSvgImagesPath/settings.svg';
 }
 
 class Assets {

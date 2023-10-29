@@ -7,4 +7,12 @@ const kBestSeller = "Best Seller";
 const kFeaturedSeller = "Featured Seller";
 const kNewtoMeroDiscounts = "New on Merodiscounts";
 const kBrowseMore = "Browse More";
-const KProfile = "KProfile";
+const KProfile = "Your Profile";
+const Kcoupon = "Purchase Coupons";
+const Kinvite = "Invite your Friends";
+const KAbout = "About";
+const Kpolicies = "Policies";
+const Kfaq = "FAQ";
+const Ksetting = "Settings";
+
+
