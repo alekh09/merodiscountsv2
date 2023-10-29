@@ -5,6 +5,7 @@ import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 
+
 class MorePage extends StatelessWidget {
   const MorePage({super.key}); // Fixed the constructor
 
@@ -34,6 +35,7 @@ class MorePage extends StatelessWidget {
                     const ResponsiveText(
                       "Login or Sign Up to view your complete profile.",
                       fontWeight: FontWeight.w400,
+                      textColor: Color(0xff252525),
                     ),
                     // SizedBox(height: kVerticalMargin),
                     Container(
@@ -87,6 +89,7 @@ class MorePage extends StatelessWidget {
                              ),
                             ResponsiveText("Get offers on every coupons purchased.",
                              fontWeight: FontWeight.w400,
+                             textColor: Color(0xff5E656E),
                              ),
                           ],
                         ),
@@ -130,6 +133,7 @@ class MorePage extends StatelessWidget {
                                  ),
                                 ResponsiveText("Share this app to your friends and relatives.",
                                  fontWeight: FontWeight.w400,
+                                 textColor: Color(0xff5E656E),
                                 ),
                             ],
                           ),
@@ -178,6 +182,7 @@ class MorePage extends StatelessWidget {
                                  ),
                                 ResponsiveText("Get to know who we are.",
                                  fontWeight: FontWeight.w400,
+                                 textColor: Color(0xff5E656E),
                                 ),
                             ],
                           ),
@@ -226,6 +231,7 @@ class MorePage extends StatelessWidget {
                                  ),
                                 ResponsiveText("We got you bounded.",
                                  fontWeight: FontWeight.w400,
+                                 textColor: Color(0xff5E656E),
                                 ),
                             ],
                           ),
@@ -274,6 +280,7 @@ class MorePage extends StatelessWidget {
                                  ),
                                 ResponsiveText("Got questions? We’ve got answered!",
                                  fontWeight: FontWeight.w400,
+                                 textColor: Color(0xff5E656E),
                                 ),
                             ],
                           ),
@@ -322,6 +329,7 @@ class MorePage extends StatelessWidget {
                                  ),
                                 ResponsiveText("Take control and make the app truly yours.",
                                  fontWeight: FontWeight.w400,
+                                 textColor: Color(0xff5E656E),
                                 ),
                             ],
                           ),
@@ -340,10 +348,8 @@ class MorePage extends StatelessWidget {
                   ),
                 ], 
               ),
-              
             ],
           ),
-        
         ),
       ),
     );
