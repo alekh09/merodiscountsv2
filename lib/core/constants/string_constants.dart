@@ -1,0 +1,10 @@
+const kLocation = "M8M5+9GR, Gyanodaya Pustakalaya Marg..";
+const kCombo = "Combo Deals For you";
+const kSee = "See all";
+const kPopular = "Popular For You";
+const kOffer = "Special Offer for You";
+const kBestSeller = "Best Seller";
+const kFeaturedSeller = "Featured Seller";
+const kNewtoMeroDiscounts = "New on Merodiscounts";
+const kBrowseMore = "Browse More";
+const KProfile = "KProfile";
