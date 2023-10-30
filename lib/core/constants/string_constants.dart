@@ -14,5 +14,8 @@ const KAbout = "About";
 const Kpolicies = "Policies";
 const Kfaq = "FAQ";
 const Ksetting = "Settings";
-
+const KProfileName = "Bhuwan Shrestha";
+const kPhonenumber = "9863370955";
+const kEmail = "user@gmaail.com";
+const kName = "BS";
 
