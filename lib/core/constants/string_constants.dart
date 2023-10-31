@@ -16,3 +16,11 @@ const Kfaq = "FAQ";
 const Ksetting = "Settings";
 
 
+const KVendorName = "Makai Restaurant";
+const kVendorAddress = "New Baneshwor, Kathmandu";
+const kVendorRatings =  "4.6 (127 ratings)";
+const kVendorDeliverTime =  "30-40 min";
+const kOpenedStatus =  "Closed";
+const kMultipleVendorOrder = "Multiple Vendor Order";
+const KSpecialOffersForYou = "Special Offers For You";
+const kVendorOffers = "Buy any 2 get 1 pound cake free";

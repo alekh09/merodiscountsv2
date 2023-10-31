@@ -26,6 +26,7 @@ class _AssetsSvgImagesGen {
   String get policies => '$kSvgImagesPath/policies.svg';
   String get faq => '$kSvgImagesPath/faq.svg';
   String get settings => '$kSvgImagesPath/settings.svg';
+  String get star_rating => '$kSvgImagesPath/star_rating.svg';
 }
 
 class Assets {
