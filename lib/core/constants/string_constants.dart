@@ -15,4 +15,6 @@ const Kpolicies = "Policies";
 const Kfaq = "FAQ";
 const Ksetting = "Settings";
 
+const kVendorsName="The Lucky's Pizza Village";
+
 

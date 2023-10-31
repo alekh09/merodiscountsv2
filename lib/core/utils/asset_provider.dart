@@ -13,6 +13,7 @@ class _AssetsSvgImagesGen {
   String get eyeOff => '$kSvgImagesPath/eye_off.svg';
   String get eyeOn => '$kSvgImagesPath/eye_on.svg';
   String get arrowDown => '$kSvgImagesPath/arrow-down.svg';
+  String get arrowLeftLong => '$kSvgImagesPath/arrow-left-long.svg';
   String get bell => '$kSvgImagesPath/bell.svg';
   String get QR_icon => '$kSvgImagesPath/QR_icon.svg';
   String get search => '$kSvgImagesPath/search.svg';
@@ -26,6 +27,9 @@ class _AssetsSvgImagesGen {
   String get policies => '$kSvgImagesPath/policies.svg';
   String get faq => '$kSvgImagesPath/faq.svg';
   String get settings => '$kSvgImagesPath/settings.svg';
+  String get sliders => '$kSvgImagesPath/sliders.svg';
+
+
 }
 
 class Assets {
