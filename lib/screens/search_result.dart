@@ -206,13 +206,12 @@ class SearchResult extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     ResponsiveText(
-                      " Manbhawan, Kathmandu",
+                      "Manbhawan, Kathmandu",
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
                     ),
-                    SizedBox(height: 5),
+                    SizedBox(height: kHorizontalMargin),
                     Row(
-                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Expanded(
                           child: ResponsiveText(
@@ -222,15 +221,11 @@ class SearchResult extends StatelessWidget {
                             textColor: Color(0xFF68727D),
                           ),
                         ),
-                        Row(
-                          children: [
-                            SvgPicture.asset(
-                              Assets.svgImages.ratingreen
-                            ),
-                            SizedBox(width: 2),
-                            ResponsiveText("4.5/5")
-                          ],
-                        )
+                        SvgPicture.asset(
+                          Assets.svgImages.ratingreen
+                        ),
+                        SizedBox(width: 2),
+                        ResponsiveText("4.5/5")
                       ],
                     ),
 
