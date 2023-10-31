@@ -167,28 +167,34 @@ class VendorPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  // Column(
-                  //   children: [
-                  //     Container(
-                  //       width: height*0.5,
-                  //       // decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-                  //       color: Color(kSpecialOffer),
-                  //       padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
-                  //       height: height*0.12,
-                  //       child: ResponsiveText(kVendorOffers,
-                  //       textColor: Colors.white,
-                  //       fontSize: 16,
-                  //       fontWeight: FontWeight.w600,
-                  //       ),
-                        
-                  //     ),
-                  //   ],
-                  // ),
+                  // SizedBox(height: kHorizontalMargin,),
+                  
                 ],
               ),
             ),
-            
+            SizedBox(height: kHorizontalMargin,),
+            Container(
+              color: Color(kPrimaryWhite),
+              height: height*0.3,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ResponsiveText(
+                          kCombo,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          textColor: Color(kTextIcon),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ), 
       ),
