@@ -306,7 +306,7 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                               height: constraints.maxHeight * 0.6,
                               width:  constraints.maxWidth,
                               child: ClipRRect(
