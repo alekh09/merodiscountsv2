@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,7 +5,8 @@ import 'package:mero_discountsv2/core/constants/color_constants.dart';
 import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
-import '../core/constants/string_constants.dart';
+
+import '../../core/constants/string_constants.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});

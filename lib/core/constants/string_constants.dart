@@ -17,5 +17,10 @@ const Ksetting = "Settings";
 
 const kVendorsName="The Lucky's Pizza Village";
 const kFood="Mushroom Pizza";
-
+const kSortBy = 'Sort By';
+const kWithOffers = 'With Offers';
+const kRatings='Ratings';
+const kPriceRange='Price Range';
+const kDeliveryTime="30-40 min";
+const kVendorLocation="Manbhawan, Kathmandu";
 

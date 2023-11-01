@@ -5,6 +5,8 @@ import '../constants/constant_path.dart';
 class _AssetsImagesGen {
   const _AssetsImagesGen();
 
+  String get eyeOff => '$kImagesPath/eye_off.png';
+
 }
 
 class _AssetsSvgImagesGen {
