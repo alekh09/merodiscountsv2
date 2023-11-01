@@ -390,7 +390,7 @@ class VendorPage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ],
@@ -398,94 +398,114 @@ class VendorPage extends StatelessWidget {
                 ],
               ),
             ),
-
             SizedBox(height:1),
             Container(
               padding:  EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+              // height: height*0.2,
+              // width: height ,
               decoration:  BoxDecoration(
                 color: Color(kPrimaryWhite),
               ),
               child: Column(
                 children: [
-                  SizedBox(height: kHorizontalMargin,),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          SvgPicture.asset(
-                            Assets.svgImages.redbutton,
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: kHorizontalMargin),
-                      Row(
-                        children: [
-                          ResponsiveText(
-                            kItemName,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            textColor: Color(kTextIcon),
-                          ),
-                        ],
-                      ),
-                       Row(
-                        children: [
-                          ResponsiveText(
-                            kItemDescription,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            textColor: Color(kBaseLight),
-                            // maxLines: 2,
-                            // textOverflow: TextOverflow.ellipsis,
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: kHorizontalMargin/3),
-                      Row(
-                        children: [
-                          SvgPicture.asset(
-                            Assets.svgImages.ratingreen
-                          ),
-                          SizedBox(width: kHorizontalMargin/3),
-                          ResponsiveText(kRating,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ResponsiveText(kPrice,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          Container(
-                            // width: width * 0.4,
-                            padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin/2, vertical: kVerticalMargin/3),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(24),
-                              border: Border.all(color: Color(0xffEAEBF0))),
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(
-                                  Assets.svgImages.plus_icon
-                                ),
-                                SizedBox(width: kHorizontalMargin/2,),
-                                ResponsiveText(kAdd,
-                                fontWeight: FontWeight.w500,
-                                textColor: Color(0xff252525),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                  Row(
+                    children: [ 
+                      ResponsiveText(
+                        KVendorName,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        textColor: Color(kTextIcon),
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(height: kHorizontalMargin,),
+                  Container(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ResponsiveText(
+                              kItemName,
+                              fontSize:16,
+                              fontWeight: FontWeight.w700,
+                              textColor: Color(kTextIcon),
+                              ),
+                              ResponsiveText(kItemDescription,
+                              fontSize:12,
+                              fontWeight: FontWeight.w400,
+                              textColor: Color(kBaseLight),
+                              ),
+                              Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    Assets.svgImages.ratingreen),
+                                    SizedBox(width: kHorizontalMargin/2),
+                                    ResponsiveText(kRating,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  ResponsiveText(kPrice,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  textColor: Color(kTextIcon),
+                                  ),
+                                  SizedBox(width: kHorizontalMargin/2,),
+                                  Expanded(
+                                    child: ResponsiveText(kPrice,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                    textColor: Color(kBaseLight),
+                                    
+                                    decoration: TextDecoration.lineThrough,),
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin/2, vertical: kVerticalMargin/3),
+                                    decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(24),
+                                    border: Border.all(color: Color(0xffEAEBF0))),
+                                    child: Row(
+                                      children: [
+                                      SvgPicture.asset(
+                                        Assets.svgImages.plus_icon
+                                       ),
+                                      SizedBox(width: kHorizontalMargin/2,),
+                                      ResponsiveText(kAdd,
+                                        fontWeight: FontWeight.w500,
+                                       textColor: Color(0xff252525),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 100,
+                        width: 100,
+                        child: ClipRRect(
+                          child: CachedNetworkImage(
+                            imageUrl: 
+                              'https://merodiscounts.com/storage/media/service/We2OKq1JcdvjjQVqfc0Owl9vH4It1HnNCH0QOb4S.jpg', 
+                            fit: BoxFit.cover
+                          ), 
+                        borderRadius: BorderRadius.circular(8),
+                      ),            
+                      ),
+                      ]),
+                  ),
                 ],
               ),
             ),
+            
             
           ],
         ), 
