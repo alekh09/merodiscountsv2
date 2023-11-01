@@ -52,6 +52,7 @@ class SearchResult extends StatelessWidget {
                   SizedBox(height: kVerticalMargin/2),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
                     child: Row(
                       children: [
                         Container(
@@ -159,31 +160,31 @@ class SearchResult extends StatelessWidget {
                       ],
                     ),
                   )
+                  
+
 
                 ],
               ),
 
             ),
-
             Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(height: kVerticalMargin/2),
-                    const VendorWithItemTile(),
-                    SizedBox(height: kVerticalMargin/8),
-                    const VendorInfo(),
-                    SizedBox(height: kVerticalMargin/2),
-                    const VendorWithItemTile(),
-                    SizedBox(height: kVerticalMargin/8),
-                    const VendorInfo(),
-                    SizedBox(height: kVerticalMargin/2),
-                    const VendorInfoOnly(),
-
-                  ],
-                ),
-              ),
+              child: ListView.builder(
+                itemCount: 10, // replace with your actual item count
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    children: [
+                      SizedBox(height: kVerticalMargin/2),
+                      const VendorWithItemTile(),
+                      SizedBox(height: kVerticalMargin/8),
+                      const VendorInfo(),
+                      //SizedBox(height: kVerticalMargin/2),
+                      //const VendorInfoOnly()
+                    ],
+                  );
+                },
+              )
             ),
+
 
 
 

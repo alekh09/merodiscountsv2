@@ -13,14 +13,14 @@ class VendorWithItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: height * 0.35,
-      color: Colors.white,
+      color:kDefaultIconLightColor,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => LayoutBuilder(
             builder: (context, constraints) {
               return Container(
                 width: width * 0.5,
-                margin: EdgeInsets.only(left: index == 0? kHorizontalMargin: kHorizontalMargin/2, right: index == 4? kHorizontalMargin: kHorizontalMargin/2, top: kVerticalMargin/2, bottom: kVerticalMargin/2),
+                margin: EdgeInsets.only(left: index == 0? kHorizontalMargin: kHorizontalMargin/2, right: index == 4? kHorizontalMargin: kHorizontalMargin/2 , top: kVerticalMargin/2, bottom: kVerticalMargin/2,),
                 decoration: BoxDecoration(
                   // color: Colors.amberAccent,
                   borderRadius: BorderRadius.circular(12),
