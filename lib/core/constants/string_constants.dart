@@ -33,3 +33,4 @@ const kVegOnly = "Veg Only";
 const kItemName = "Sweet Corn Sadheko";
 const kAdd = "Add";
 const kItemDescription = "Chicken Chilly, Chicken Drumstick, Sadheko Chicken, Chicken MoMo Steam, Fries";
+const kFoodList = "Go Foodie Special Snacks";
