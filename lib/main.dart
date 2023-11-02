@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mero_discountsv2/screens/home_page.dart';
 import 'package:mero_discountsv2/screens/more.dart';
-import 'package:mero_discountsv2/screens/vendor_page.dart';
+import 'package:mero_discountsv2/screens/vendorpage/vendor_page.dart';
 
 
 void main() {
