@@ -30,6 +30,14 @@ class _AssetsSvgImagesGen {
   String get faq => '$kSvgImagesPath/faq.svg';
   String get settings => '$kSvgImagesPath/settings.svg';
   String get sliders => '$kSvgImagesPath/sliders.svg';
+  String get plus => '$kSvgImagesPath/plus.svg';
+  String get delete => '$kSvgImagesPath/delete.svg';
+  String get arrowRight => '$kSvgImagesPath/arrow-right.svg';
+  String get info => '$kSvgImagesPath/info.svg';
+
+
+
+
 
 
 }

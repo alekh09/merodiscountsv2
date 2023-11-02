@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
-import 'package:mero_discountsv2/features/screens/search/vendor_info_only_tile.dart';
 import 'package:mero_discountsv2/features/screens/search/vendor_info_under_item_tile.dart';
 import 'package:mero_discountsv2/features/screens/search/vendor_with_item_tile.dart';
 
@@ -10,8 +9,8 @@ import '../../../core/utils/asset_provider.dart';
 import '../../../core/utils/util.dart';
 import '../../widgets/responsive_text.dart';
 
-class SearchResult extends StatelessWidget {
-  const SearchResult({super.key});
+class SearchResultPage extends StatelessWidget {
+  const SearchResultPage({super.key});
 
   @override
   Widget build(BuildContext context) {

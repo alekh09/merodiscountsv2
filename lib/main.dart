@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'features/screens/search/search_result.dart';
-
+import 'package:mero_discountsv2/features/screens/cart/cart_page.dart';
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const  MaterialApp(
-      home: SearchResult(
+      home: CartPage(
       ),
     );
   }
