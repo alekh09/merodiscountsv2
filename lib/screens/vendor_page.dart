@@ -94,41 +94,57 @@ class VendorPage extends StatelessWidget {
               height: height*0.12,
               width: height*1,
               color: Color(kPrimaryWhite),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ResponsiveText(
-                    kMultipleVendorOrder,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    textColor: Color(kTextIcon),
-                  ),
-                  SizedBox(height: kVerticalMargin/3,),
-                  Container(
-                    width: width * 0.4,
-                    padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin/2, vertical: kVerticalMargin/3),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: Color(0xffEAEBF0))),
-                    child: Row(
-                      children: [
-                        CircleAvatar(radius: 15,
-                        backgroundImage: 
-                          NetworkImage('https://merodiscounts.com/storage/media/user/MwXmBjs0lyxar0Y1CjwxDXrpQjazM0lxad7zM8I8.png',
-                        ),
-                        ),
-                        SizedBox(width: kHorizontalMargin/2,),
-                        ResponsiveText(KVendorName,
-                        fontWeight: FontWeight.w500,
-                        textColor: Color(0xff252525),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+              child: 
+                  ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 4,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ResponsiveText(
+                            kMultipleVendorOrder,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            textColor: Color(kTextIcon),
+                          ),
+                          SizedBox(height: kVerticalMargin / 3),
+                          Container(
+                            width: width * 0.4,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: kHorizontalMargin / 2,
+                              vertical: kVerticalMargin / 3,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(color: Color(0xffEAEBF0)),
+                            ),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 15,
+                                  backgroundImage: NetworkImage(
+                                    'https://merodiscounts.com/storage/media/user/MwXmBjs0lyxar0Y1CjwxDXrpQjazM0lxad7zM8I8.png',
+                                  ),
+                                ),
+                                SizedBox(width: kHorizontalMargin / 2),
+                                ResponsiveText(
+                                  KVendorName,
+                                  fontWeight: FontWeight.w500,
+                                  textColor: Color(0xff252525),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  )
+
+               
               ),
               
-            ),
+            
             SizedBox(height: kHorizontalMargin,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
@@ -488,6 +504,7 @@ class VendorPage extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(width: kHorizontalMargin/2,),
                       Container(
                         height: 100,
                         width: 100,
@@ -498,18 +515,17 @@ class VendorPage extends StatelessWidget {
                             fit: BoxFit.cover
                           ), 
                         borderRadius: BorderRadius.circular(8),
-                      ),            
+                            ),            
+                          ),
+                        ]
                       ),
-                      ]),
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-            
-            
-          ],
-        ), 
-      ),
+            ],
+          ), 
+        ),
       ),
     );
   }
