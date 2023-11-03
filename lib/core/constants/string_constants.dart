@@ -24,3 +24,7 @@ const kPriceRange='Price Range';
 const kDeliveryTime="30-40 min";
 const kVendorLocation="Manbhawan, Kathmandu";
 
+const kDeliveryTerm1='Delivery fee varies for each restaurant based on your location and other factors.';
+const kDeliveryTerm2='Promotions or discounts that reduce delivery fee may apply';
+
+

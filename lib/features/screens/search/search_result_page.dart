@@ -168,7 +168,7 @@ class SearchResultPage extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                itemCount: 10, // replace with your actual item count
+                itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   return Column(
                     children: [
