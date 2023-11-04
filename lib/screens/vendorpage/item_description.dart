@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:mero_discountsv2/core/constants/color_constants.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
+import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 
@@ -62,11 +64,97 @@ class Itemdescription extends StatelessWidget {
               ),
             ),
             Container(
-              height: kVerticalMargin,
+              height: kVerticalMargin/2,
               color: Color(kNeutral),
             ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ResponsiveText(
+                          "Size",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
+                      Container(
+                              padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin/2, vertical: kVerticalMargin/3),
+                              decoration: BoxDecoration(color: Color(kNeutral),
+                              borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: Row(
+                                children: [
+                                SizedBox(width: kHorizontalMargin/2,),
+                                ResponsiveText(
+                                  kRequired,
+                                  fontWeight: FontWeight.w500,
+                                  textColor: Color(kTextIcon),
 
-
+                                ),
+                              ],
+                            ),
+                        ),
+                      ],
+                    ),
+                    ResponsiveText("Choose 1",
+                    fontSize: 14,
+                    textColor: Color(kBaseLight),
+                    fontWeight: FontWeight.w400,
+                    ),
+                  ],
+                )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        ResponsiveText(
+                          "Small",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        ResponsiveText("Rs.200",
+                        fontWeight: FontWeight.w400,
+                        textColor: Color(kBaseLight),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ), 
+              Divider(height: 2,  color: Color(kBaseLight)),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        ResponsiveText(
+                          "Medium",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        ResponsiveText("Rs.300",
+                        fontWeight: FontWeight.w400,
+                        textColor: Color(kBaseLight),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ), 
+              Divider(height: 2,  color: Color(kBaseLight)),
             ],
           ),
         ), 
