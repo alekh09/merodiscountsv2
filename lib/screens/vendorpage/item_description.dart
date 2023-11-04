@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:mero_discountsv2/core/constants/color_constants.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
-import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 
@@ -12,19 +10,21 @@ class Itemdescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(kNeutral),
+      backgroundColor: Color(kPrimaryWhite),
       body: SafeArea(
         child:SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Stack(
               children: [
                 Container(
-                  height: height * 0.25,
+                  height: height * 0.26,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                        'https://merodiscounts.com/storage/media/vendor/vendor_banner_image/makai_restaurant_1695278466.jpg',
+                        'https://merodiscounts.com/storage/media/user/OAyO7OFc08vqwHJS4PT5OMHRVVOhMYOZcmz0ZZKJ.jpg',
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -39,9 +39,34 @@ class Itemdescription extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                
               ],
             ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ResponsiveText(
+                    kItemBurger,
+                    fontSize:18,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  SizedBox(height: kVerticalMargin/2),
+                  ResponsiveText(
+                    kBurgerDescription,
+                    fontWeight: FontWeight.w400,
+                    textColor: Color(kBaseLight),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: kVerticalMargin,
+              color: Color(kNeutral),
+            ),
+
+
             ],
           ),
         ), 

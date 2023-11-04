@@ -34,4 +34,6 @@ const kItemName = "Sweet Corn Sadheko";
 const kAdd = "Add";
 const kItemDescription = "Chicken Chilly, Chicken Drumstick, Sadheko Chicken, Chicken MoMo Steam, Fries";
 const kFoodList = "Go Foodie Special Snacks";
-const kAboutRestaurant = " About Restaurant";
+const kAboutRestaurant = "About Restaurant";
+const kItemBurger = "Crunchy Chicken Burger";
+const kBurgerDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas lorem, in rhoncus odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.";
