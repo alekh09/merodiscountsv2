@@ -97,14 +97,14 @@ class _CartPageState extends State<CartPage> {
           ),
           Expanded(
             child: ListView.builder(
-                itemCount: 5,
+                itemCount: 3,
                 itemBuilder: (BuildContext context, int index) {
                   return Column(
                     children: [
                       SizedBox(height: kVerticalMargin / 8),
                       ItemWithVendor(),
                       SizedBox(height: kVerticalMargin / 4),
-                      ItemWithVendor()
+                      //ItemWithVendor()
                     ],
                   );
                 }),

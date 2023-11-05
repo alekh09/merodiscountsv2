@@ -35,6 +35,8 @@ class _AssetsSvgImagesGen {
   String get arrowRight => '$kSvgImagesPath/arrow-right.svg';
   String get info => '$kSvgImagesPath/info.svg';
   String get close => '$kSvgImagesPath/close.svg';
+  String get minus => '$kSvgImagesPath/minus.svg';
+
 
 
 
