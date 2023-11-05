@@ -33,7 +33,7 @@ class _AssetsSvgImagesGen {
   String get more_icon => '$kSvgImagesPath/more_icon.svg';
   String get share_icon => '$kSvgImagesPath/share_icon.svg';
   String get circle_info_icon => '$kSvgImagesPath/circle_info_icon.svg';
-
+  String get back_arrow => '$kSvgImagesPath/back_arrow.svg';
 
 
 }
