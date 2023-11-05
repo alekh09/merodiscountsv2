@@ -139,6 +139,8 @@ class Itemdescription extends StatelessWidget {
                   // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ResponsiveText(
                           "Medium",
@@ -155,6 +157,30 @@ class Itemdescription extends StatelessWidget {
                 ),
               ), 
               Divider(height: 2,  color: Color(kBaseLight)),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ResponsiveText(
+                          "Large",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        ResponsiveText("Rs.400",
+                        fontWeight: FontWeight.w400,
+                        textColor: Color(kBaseLight),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ), 
             ],
           ),
         ), 
