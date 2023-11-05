@@ -54,7 +54,87 @@ class NotificationScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xffffefee),
+                        ),
+                        child : SvgPicture.asset(
+                          Assets.svgImages.coupon_icon,
+                        ),
+                      ),
+                      SizedBox(width: kHorizontalMargin),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ResponsiveText(
+                            "50% off on all product on Hakama Sushi. Grab offer now!",
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                          ),
+                          ResponsiveText(
+                            "9:00 AM",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            textColor: Color(kBaseLight),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: kVerticalMargin,),
+            Divider(height: 1, ),
+            SizedBox(height: kVerticalMargin,),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xffE9F8F1),
+                        ),
+                        child : SvgPicture.asset(
+                          Assets.svgImages.cart_icon,
+                        ),
+                      ),
+                      SizedBox(width: kHorizontalMargin),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ResponsiveText(
+                            "50% off on all product on Hakama Sushi. Grab offer now!",
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                          ),
+                          ResponsiveText(
+                            "9:00 AM",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            textColor: Color(kBaseLight),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  
+                ),
+              ],
+            ),
           ],
         )
       ),
