@@ -320,7 +320,7 @@ class VendorPage extends StatelessWidget {
                             builder: (BuildContext context, ScrollController scrollController){
                             return SingleChildScrollView(
                               child: Container(
-                                // height: height * 2,
+                                height: height * 2,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
