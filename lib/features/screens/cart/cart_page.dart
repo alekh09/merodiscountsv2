@@ -24,20 +24,73 @@ class _CartPageState extends State<CartPage> {
       backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child:
-            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Column(
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
           Container(
             padding: EdgeInsets.all(kHorizontalMargin * 2),
             color: kDefaultIconLightColor,
             child: Row(
               children: [
-                SvgPicture.asset(
-                  Assets.svgImages.arrowLeftLong,
-                  height: height * 0.025,
-                  width: height * 0.025,
-                ),
-                SizedBox(width: kHorizontalMargin * 8),
                 Container(
-                  child: Row(),
+                  child: SvgPicture.asset(
+                    Assets.svgImages.arrowLeftLong,
+                    height: height * 0.025,
+                    width: height * 0.025,
+                  ),
+                ),
+                SizedBox(width: kHorizontalMargin*6),
+                Center(
+                  child: Container(
+                    //width: width*0.5,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFF5F5F5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
+                          decoration: ShapeDecoration(
+                            color: Color(0xFFF5F5F5),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ResponsiveText('Delivery',fontSize: 16,fontWeight: FontWeight.w500,)
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding:EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF252525),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ResponsiveText('Takeway',fontSize: 16,fontWeight: FontWeight.w500,textColor: kDefaultIconLightColor,)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
