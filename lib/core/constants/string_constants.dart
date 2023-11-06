@@ -27,4 +27,11 @@ const kVendorLocation="Manbhawan, Kathmandu";
 const kDeliveryTerm1='Delivery fee varies for each restaurant based on your location and other factors.';
 const kDeliveryTerm2='Promotions or discounts that reduce delivery fee may apply';
 
+const kToReview= 'To Review';
+const kHistory= 'History';
+const kPurchasedOn='Purchased On : ';
+const kEdit= 'Edit';
+const kReview='Review';
+const kReviewDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque nibh nisl. Suspendisse sagittis metus ut mauris molestie feugiat. In congue ut tellus eget hendrerit.';
+
 
