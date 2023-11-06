@@ -32,6 +32,9 @@ const kHistory= 'History';
 const kPurchasedOn='Purchased On : ';
 const kEdit= 'Edit';
 const kReview='Review';
+const kEditReview='Edit Review';
+const kAddPhoto='Add Photo';
+const kWriteReview='Write Review';
 const kReviewDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque nibh nisl. Suspendisse sagittis metus ut mauris molestie feugiat. In congue ut tellus eget hendrerit.';
 
 

@@ -37,11 +37,8 @@ class _AssetsSvgImagesGen {
   String get close => '$kSvgImagesPath/close.svg';
   String get minus => '$kSvgImagesPath/minus.svg';
   String get pencil => '$kSvgImagesPath/pencil.svg';
-
-
-
-
-
+  String get circle_check => '$kSvgImagesPath/circle-check.svg';
+  String get camera => '$kSvgImagesPath/camera.svg';
 
 
 }

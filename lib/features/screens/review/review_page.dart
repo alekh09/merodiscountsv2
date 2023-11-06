@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
+import 'package:mero_discountsv2/features/screens/edit_review/edit_review_page.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/utils/asset_provider.dart';
@@ -23,6 +24,7 @@ class _ReviewPageState extends State<ReviewPage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           leading: Container(
             padding: EdgeInsets.all(kHorizontalMargin * 1.25),
             child: SvgPicture.asset(
@@ -145,16 +147,23 @@ class _ReviewPageState extends State<ReviewPage> {
                                 ResponsiveText(kVendorsName,fontSize: 16,fontWeight: FontWeight.w600,),
                                 Container(
                                   padding: EdgeInsets.all(kHorizontalMargin/2),
-                                    child: Row(
+                                    child: GestureDetector(
+                                      child: Row(
                                   children: [
-                                    ResponsiveText(kEdit,fontSize: 14,fontWeight: FontWeight.w500,textColor: kPrimaryColor,),
-                                    SizedBox(width: kHorizontalMargin/2),
-                                    SvgPicture.asset(
-                                      Assets.svgImages.pencil
-                                    )
+                                      ResponsiveText(kEdit,fontSize: 14,fontWeight: FontWeight.w500,textColor: kPrimaryColor,),
+                                      SizedBox(width: kHorizontalMargin/2),
+                                      SvgPicture.asset(
+                                        Assets.svgImages.pencil
+                                      )
 
                                   ],
-                                )),
+                                ),
+                                      onTap: ()
+                                      {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context)=>EditReviewPage()));
+                                      },
+                                    )
+                                ),
                               ],
                             ),
                             SizedBox(height: kHorizontalMargin/8),
