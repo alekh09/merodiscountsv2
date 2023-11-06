@@ -181,6 +181,99 @@ class Itemdescription extends StatelessWidget {
                   ],
                 ),
               ), 
+              SizedBox(height: kVerticalMargin/2),
+              Divider(height: 2,thickness: kVerticalMargin/2),
+              Container(
+              margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ResponsiveText(
+                          "Addon",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
+                      Container(
+                              padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin/2, vertical: kVerticalMargin/3),
+                              decoration: BoxDecoration(color: Color(kNeutral),
+                              borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: Row(
+                                children: [
+                                SizedBox(width: kHorizontalMargin/2,),
+                                ResponsiveText(
+                                  kRequired,
+                                  fontWeight: FontWeight.w500,
+                                  textColor: Color(kTextIcon),
+
+                                ),
+                              ],
+                            ),
+                        ),
+                      ],
+                    ),
+                    ResponsiveText("Choose 1",
+                    fontSize: 14,
+                    textColor: Color(kBaseLight),
+                    fontWeight: FontWeight.w400,
+                    ),
+                  ],
+                )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ResponsiveText(
+                          "Extra Cheese",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        ResponsiveText("Rs. 50",
+                        fontWeight: FontWeight.w400,
+                        textColor: Color(kBaseLight),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ), 
+              Divider(height: 2,  color: Color(kBaseLight)),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ResponsiveText(
+                          "Extra Mushroom",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        ResponsiveText("Rs.100",
+                        fontWeight: FontWeight.w400,
+                        textColor: Color(kBaseLight),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ), 
             ],
           ),
         ), 
