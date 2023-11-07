@@ -44,6 +44,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
         backgroundColor: Colors.grey.shade300,
         body: Column(
           children: [
+            Container()
 
 
           ],
