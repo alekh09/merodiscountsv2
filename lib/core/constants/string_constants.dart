@@ -48,3 +48,5 @@ const kAboutTheRestaurant = "About The Restaurant";
 const kReadMore = "Read More";
 const kViewAllOutlets = "View all outlets";
 const kSimilarRestaurants = "Similar Restaurants";
+const kRatingAndReview = "Rating & Reviews";
+const kDate = "11 Oct, 2023";
