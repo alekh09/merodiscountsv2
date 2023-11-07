@@ -218,7 +218,7 @@ class AboutVendor extends StatelessWidget {
               ),
               SizedBox(height: kVerticalMargin,),
               Container(
-                // height: height *0.4,
+                height: height *0.36,
                 color: Colors.white,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -350,6 +350,231 @@ class AboutVendor extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: kVerticalMargin),
+              Container(
+                // height: height *0.4,
+                color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              ResponsiveText(
+                                kAboutTheRestaurant,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: kVerticalMargin/2),
+                          ResponsiveText(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat sed mi ac facilisis. Phasellus feugiat id justo quis ultrices. Nullam vitae sem varius tellus consectetur lacinia in non dui. Integer felis odio, suscipit eget mi eu, consequat malesuada tellus. In magna justo, tempus sodales tristique ac, mattis ac lorem. Vivamus non enim in massa egestas sagittis non in felis. Sed justo enim, ultrices sed metus quis, dictum aliquet libero. Curabitur commodo erat sit amet sem eleifend porta. Pellentesque ultrices urna at scelerisque fermentum.",
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            maxLines: 5,
+                            textOverflow: TextOverflow.ellipsis,
+                            textColor: Color(kBaseLight),
+                          ),
+                          SizedBox(height: kVerticalMargin/2,),
+                          Row(
+                            children: [
+                              ResponsiveText(
+                                kReadMore,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                textColor: Color(kPrimary),
+                              ),
+                              SizedBox(width: kHorizontalMargin/2,),
+                              SvgPicture.asset(
+                                Assets.svgImages.right
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: kVerticalMargin),
+              Container(
+                // height: height * 0.53,
+                color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                      child: Row(
+                        children: [
+                          ResponsiveText(
+                            kSimilarRestaurants,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                // color: Colors.amber,
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
+                child: Container(
+                  height: height * 0.42,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Container(
+                          width: width * 0.35,
+                           margin: EdgeInsets.only(left: index == 0? 0: kHorizontalMargin/2, right: index == 3? 0: kHorizontalMargin/2, top: kVerticalMargin/2, bottom: kVerticalMargin/2),
+                          decoration: BoxDecoration( 
+                            // color: Colors.amber,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // ignore: sized_box_for_whitespace
+                              Container(
+                                height: constraints.maxHeight * 0.59,
+                                width:  constraints.maxWidth,
+                                child: ClipRRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl: 
+                                    'https://th.bing.com/th/id/R.dbdc157c3140e23201902818fadb9269?rik=gLE6XchXDb9Inw&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f176%2f236%2f513067186.jpg&ehk=Z46upGk8L3xrLfkathwCqK8gL2PM%2frnpAq46fsYqslc%3d&risl=&pid=ImgRaw&r=0', 
+                                fit: BoxFit.cover,
+                                ), 
+                                borderRadius: BorderRadius.circular(16),
+                                ),
+                              ),
+                              SizedBox(height: kHorizontalMargin/2,),
+                              ResponsiveText('Go Foodie Cafe',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              
+                              ),
+                              ResponsiveText('Jhamsikhel, Lalitpur',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              textColor: Color(kBaseLight),
+                              ),
+                              
+                                  ],
+                                ),
+                              );
+                            }
+                          ),
+                          itemCount: 4,
+                        ),
+                      ),
+                    ),   
+                  ],
+                ),
+              ),
+              SizedBox(height: kVerticalMargin,),
+              Container(
+                // height: height *0.4,
+                color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                      child: Row(
+                        children: [
+                          ResponsiveText(
+                            kSimilarRestaurants,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                // color: Colors.amber,
+                margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
+                child: Container(
+                  height: height * 0.27,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Container(
+                          width: width * 0.6,
+                           margin: EdgeInsets.only(left: index == 0? 0: kHorizontalMargin/2, right: index == 11? 0: kHorizontalMargin/2, top: kVerticalMargin/2, bottom: kVerticalMargin/2),
+                          decoration: BoxDecoration( 
+                            // color: Colors.amber,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // ignore: sized_box_for_whitespace
+                              Container(
+                                height: constraints.maxHeight * 0.59,
+                                width:  constraints.maxWidth,
+                                child: ClipRRect(
+                                  child: CachedNetworkImage(
+                                    imageUrl: 
+                                    'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+                                fit: BoxFit.cover,
+                                ), 
+                                borderRadius: BorderRadius.circular(16),
+                                ),
+                              ),
+                              SizedBox(height: kHorizontalMargin/2,),
+                              ResponsiveText('Monster Momo',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              
+                              ),
+                              ResponsiveText('Mid Baneshwor, Kathmandu',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: ResponsiveText('30-40 min',
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    textColor: Colors.grey,
+                                    ),
+                                  ),
+                                  SvgPicture.asset(
+                                    Assets.svgImages.ratingreen,
+                                    height: 14,
+                                    width: 14,
+                                  ),
+                                  ResponsiveText('4.5/5',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                          ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }
+                          ),
+                          itemCount: 4,
+                        ),
+                      ),
+                    ),   
+                  ],
+                ),
+              ),
+              
             ],
           ),
         ),

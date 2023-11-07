@@ -35,6 +35,8 @@ class _AssetsSvgImagesGen {
   String get circle_info_icon => '$kSvgImagesPath/circle_info_icon.svg';
   String get black_rating => '$kSvgImagesPath/black_rating.svg';
   String get clock => '$kSvgImagesPath/clock.svg';
+  String get right => '$kSvgImagesPath/right.svg';
+
 
 
 

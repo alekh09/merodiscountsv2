@@ -44,3 +44,7 @@ const kPhotos= "Photos";
 const kCustomerReview= "Customer Review";
 const kAbout = "About";
 const kCustomerName = "Surya Ghishing";
+const kAboutTheRestaurant = "About The Restaurant";
+const kReadMore = "Read More";
+const kViewAllOutlets = "View all outlets";
+const kSimilarRestaurants = "Similar Restaurants";
