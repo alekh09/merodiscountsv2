@@ -37,8 +37,15 @@ class _AssetsSvgImagesGen {
   String get close => '$kSvgImagesPath/close.svg';
   String get minus => '$kSvgImagesPath/minus.svg';
   String get pencil => '$kSvgImagesPath/pencil.svg';
-  String get circle_check => '$kSvgImagesPath/circle-check.svg';
+  String get circleCheck => '$kSvgImagesPath/circle-check.svg';
   String get camera => '$kSvgImagesPath/camera.svg';
+  String get locationDot => '$kSvgImagesPath/location-dot.svg';
+  String get user => '$kSvgImagesPath/user.svg';
+  String get phone=> '$kSvgImagesPath/phone.svg';
+  String get arrowsRotate=> '$kSvgImagesPath/arrows-rotate.svg';
+  String get locationCrossHairs=> '$kSvgImagesPath/location-crosshairs.svg';
+  String get moneyBills=> '$kSvgImagesPath/money-bills.svg';
+
 
 
 }

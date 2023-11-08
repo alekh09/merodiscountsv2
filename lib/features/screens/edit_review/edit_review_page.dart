@@ -132,7 +132,7 @@ class _EditReviewPageState extends State<EditReviewPage> {
                             child: Row(
                               children: [
                                 SvgPicture.asset(
-                                    Assets.svgImages.circle_check
+                                    Assets.svgImages.circleCheck
                                 ),
                                 SizedBox(width: kHorizontalMargin),
                                 Expanded(
