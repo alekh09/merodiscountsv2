@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mero_discountsv2/screens/about_us/about_us.dart';
+import 'package:mero_discountsv2/screens/faq/faq.dart';
 import 'package:mero_discountsv2/screens/home_page.dart';
 import 'package:mero_discountsv2/screens/more.dart';
 import 'package:mero_discountsv2/screens/privacy_policy/privacy_policy.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const  MaterialApp(
-      home: TermsAndConditions(),
+      home: FAQ(),
     );
   }
 }
