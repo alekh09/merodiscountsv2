@@ -61,12 +61,8 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                     SizedBox(height: kVerticalMargin/8),
                     Container(
                       height: height*0.2,
-                      padding: EdgeInsets.all(kHorizontalMargin/2),
-                      decoration: BoxDecoration(
-                      border: Border.all(color: kSearchBorderColor),
-                      borderRadius: BorderRadius.circular(8),
-                      color: kDefaultIconLightColor,
-                      ),
+                      padding: EdgeInsets.all(kHorizontalMargin*2),
+                      color:kDefaultIconLightColor,
                       child: GoogleMap(
                         mapType: MapType.normal,
                         initialCameraPosition: _kGooglePlex,
