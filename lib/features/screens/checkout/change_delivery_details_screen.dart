@@ -126,6 +126,57 @@ class ChangeDeliveryDetailsScreen extends StatelessWidget {
       ),
       SizedBox(height: kVerticalMargin),
       Divider(height: 1, thickness: 1),
+      Padding(
+        padding:EdgeInsets.symmetric(horizontal:kHorizontalMargin),
+        child: Slidable(
+          key: const ValueKey(0),
+          endActionPane: ActionPane(
+            extentRatio: 0.37,
+            motion: StretchMotion(),
+            children: [
+              SlidableAction(
+                  onPressed: (context) {
+                    print("Edited");
+                  },
+                  backgroundColor: kGreenBorderColor,
+                  foregroundColor: Colors.white,
+                  icon: Icons.edit,
+                  label: 'Edit'),
+              SlidableAction(
+                onPressed: (BuildContext context) {
+                  print("Deleted");
+                },
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+                icon: Icons.delete,
+                label: 'Delete',
+              ),
+            ],
+          ),
+          child: ListTile(
+              title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ResponsiveText('Sandesh Paudel',
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                  SizedBox(height: kVerticalMargin / 4),
+                  ResponsiveText(
+                    '+977 9863476955',
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    textColor: kItemDescriptionColor,
+                  ),
+                  SizedBox(height: kVerticalMargin / 4),
+                  ResponsiveText(
+                    kFullLocation,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    textColor: kItemDescriptionColor,
+                  ),
+                ],
+              )),
+        ),
+      ),
     ]);
   }
 }

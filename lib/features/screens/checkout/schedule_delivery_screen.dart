@@ -37,51 +37,56 @@ class _ScheduleDeliveryScreenState extends State<ScheduleDeliveryScreen> {
           SizedBox(
             height: kVerticalMargin,
           ),
-          Row(
-            children: [
-              Container(
-                padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: kShadowColor,
-                  border: Border.all(color: kPrimaryColor)
-                ),
-                child: Column(
-                  children: [
-                    ResponsiveText('Today',fontWeight: FontWeight.w600,fontSize: 16,),
-                    ResponsiveText('22 Sep')
-                  ],
-                ),
-              ),
-              SizedBox(width: kHorizontalMargin),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
-                decoration: BoxDecoration(
+          Wrap(
+
+            children:[ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.black)
+                    color: kShadowColor,
+                    border: Border.all(color: kPrimaryColor)
+                  ),
+                  child: Column(
+                    children: [
+                      ResponsiveText('Today',fontWeight: FontWeight.w600,fontSize: 16,),
+                      ResponsiveText('22 Sep')
+                    ],
+                  ),
                 ),
-                child: Column(
-                  children: [
-                    ResponsiveText('Tomorrow',fontWeight: FontWeight.w600,fontSize: 16,),
-                    ResponsiveText('23 Sep')
-                  ],
+                SizedBox(width: kHorizontalMargin),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.black)
+                  ),
+                  child: Column(
+                    children: [
+                      ResponsiveText('Tomorrow',fontWeight: FontWeight.w600,fontSize: 16,),
+                      ResponsiveText('23 Sep')
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(width: kHorizontalMargin),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.black)
+                SizedBox(width: kHorizontalMargin),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.black)
+                  ),
+                  child: Column(
+                    children: [
+                      ResponsiveText('Sunday',fontWeight: FontWeight.w600,fontSize: 16,),
+                      ResponsiveText('24 Sep')
+                    ],
+                  ),
                 ),
-                child: Column(
-                  children: [
-                    ResponsiveText('Sunday',fontWeight: FontWeight.w600,fontSize: 16,),
-                    ResponsiveText('24 Sep')
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
+            ]
           ),
           SizedBox(
             height: kVerticalMargin,

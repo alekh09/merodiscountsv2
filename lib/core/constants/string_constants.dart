@@ -38,5 +38,16 @@ const kWriteReview='Write Review';
 const kReviewDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque nibh nisl. Suspendisse sagittis metus ut mauris molestie feugiat. In congue ut tellus eget hendrerit.';
 const kCheckout="Checkout";
 const kCustomerName="Sandesh Paudel";
+const kCustomerContact='9815555236';
+const kChangeDeliveryDetails='Change Delivery Details';
 const kFullLocation= 'OCG Software Pvt. Ltd, Gyanodaya Pustkalaya Marg-103911, Jhamsikhel, Lalitpur, Bagmati Province';
-
+const kPayment='Payment';
+const kSubTotal='Subtotal';
+const kDeliveryFee='Delivery Fee';
+const kPromo = 'Promo';
+const kTotal='Total';
+const kChoosePayment='Choose Payment';
+const kScheduleDelivery='Schedule Delivery';
+const kChange='Change';
+const kSpecialInstruction='Special Instruction';
+const kPlaceOrder='Place Order';

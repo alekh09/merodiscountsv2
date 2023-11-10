@@ -1,17 +1,18 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
 import 'package:mero_discountsv2/features/screens/checkout/change_delivery_details_screen.dart';
 import 'package:mero_discountsv2/features/screens/checkout/payment_options_screen.dart';
 import 'package:mero_discountsv2/features/screens/checkout/schedule_delivery_screen.dart';
+import 'package:mero_discountsv2/features/screens/checkout/widgets/RowCustomerInfo.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/utils/asset_provider.dart';
 import '../../../core/utils/util.dart';
 import '../cart/cart_page.dart';
 import '../cart/delivery_info_tile.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({super.key});
@@ -21,6 +22,11 @@ class CheckOutScreen extends StatefulWidget {
 }
 
 class _CheckOutScreenState extends State<CheckOutScreen> {
+  static const CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(27.6834989179836, 85.30877155197052),
+    zoom: 14.4746,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +46,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               },
             ),
           ),
-          title: ResponsiveText(kCheckout,
+          title: const ResponsiveText(kCheckout,
               fontWeight: FontWeight.w600, fontSize: 16),
           centerTitle: true,
           backgroundColor: kDefaultIconLightColor,
@@ -54,68 +60,46 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                   children: [
                     SizedBox(height: kVerticalMargin/8),
                     Container(
+                      height: height*0.2,
+                      padding: EdgeInsets.all(kHorizontalMargin/2),
+                      decoration: BoxDecoration(
+                      border: Border.all(color: kSearchBorderColor),
+                      borderRadius: BorderRadius.circular(8),
+                      color: kDefaultIconLightColor,
+                      ),
+                      child: GoogleMap(
+                        mapType: MapType.normal,
+                        initialCameraPosition: _kGooglePlex,
+                        markers:{
+                          const Marker(
+                            markerId: MarkerId('OCG Software'),
+                            position: LatLng(27.6834989179836, 85.30877155197052),
+                          )
+                        }
+                      ),
+
+                    ),
+
+                    Container(
                       color: kDefaultIconLightColor,
                       padding: EdgeInsets.symmetric(vertical: kVerticalMargin,horizontal: kHorizontalMargin*2),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           SizedBox(height: kVerticalMargin/4),
-                          Container(
-                            height: height*0.2,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: kSearchBorderColor),
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.green,
-                            ),
 
-                            child: ClipRRect(
-
-                              child: CachedNetworkImage(
-                                  imageUrl:
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWoZeM85IBF5i3h2NlxiYJuy1FnupE2rWpQ',
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
                           SizedBox(height: kVerticalMargin),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                Assets.svgImages.locationDot
-                              ),
-                              SizedBox(width: kHorizontalMargin/2),
-                              Expanded(child: ResponsiveText(kLocation)),
-
-                            ],
-                          ),
+                          RowCustomerInfo(imageAsset: Assets.svgImages.locationDot,text: kLocation,),
                           SizedBox(height: kVerticalMargin),
-                          Divider(height: 2,thickness: 1,),
+                          const Divider(height: 2,thickness: 1,),
                           SizedBox(height: kVerticalMargin),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                  Assets.svgImages.user
-                              ),
-                              SizedBox(width: kHorizontalMargin/2),
-                              Expanded(child: ResponsiveText(kCustomerName)),
-
-                            ],
-                          ),
+                          RowCustomerInfo(imageAsset: Assets.svgImages.user,text: kCustomerName,),
                           SizedBox(height: kVerticalMargin),
-                          Divider(height: 2,thickness: 1,),
+                          const Divider(height: 2,thickness: 1,),
                           SizedBox(height: kVerticalMargin),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                  Assets.svgImages.phone
-                              ),
-                              SizedBox(width: kHorizontalMargin/2),
-                              Expanded(child: ResponsiveText('9863147896')),
-
-                            ],
-                          ),
+                          RowCustomerInfo(imageAsset: Assets.svgImages.phone,text: kCustomerContact,),
                           SizedBox(height: kVerticalMargin),
-                          Divider(height: 2,thickness: 1,),
+                          const Divider(height: 2,thickness: 1,),
                           SizedBox(height: kVerticalMargin),
                           GestureDetector(
                             child: Row(
@@ -124,7 +108,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                     Assets.svgImages.arrowsRotate
                                 ),
                                 SizedBox(width: kHorizontalMargin),
-                                Expanded(child: ResponsiveText('Change Delivery Details',fontWeight: FontWeight.w600,)),
+                                const Expanded(child: ResponsiveText(kChangeDeliveryDetails,fontWeight: FontWeight.w600,)),
                                 SvgPicture.asset(
                                     Assets.svgImages.arrowRight
                                 ),
@@ -134,7 +118,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                               showModalBottomSheet(
                                   context: context,
                                   backgroundColor: kDefaultIconLightColor,
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(16),
                                         topRight: Radius.circular(16),
@@ -146,7 +130,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                           initialChildSize: 1,
                                           minChildSize: .5,
                                           builder: (BuildContext context, ScrollController scrollController) {
-                                            return SingleChildScrollView(
+                                            return const SingleChildScrollView(
                                                 child: ChangeDeliveryDetailsScreen()
                                             );
                                           }
@@ -166,13 +150,13 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: kVerticalMargin),
-                          ResponsiveText('Payment',
+                          const ResponsiveText(kPayment,
                               fontSize: 16, fontWeight: FontWeight.w700),
                           SizedBox(height: kVerticalMargin),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              ResponsiveText('Subtotal', fontWeight: FontWeight.w500),
+                              ResponsiveText(kSubTotal, fontWeight: FontWeight.w500),
                               ResponsiveText('Rs. 4300', fontWeight: FontWeight.w500),
                             ],
                           ),
@@ -182,7 +166,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             children: [
                               Row(
                                 children: [
-                                  ResponsiveText('Delivery Fee', fontWeight: FontWeight.w500),
+                                  const ResponsiveText(kDeliveryFee, fontWeight: FontWeight.w500),
                                   SizedBox(width: kHorizontalMargin / 2),
                                   GestureDetector(
                                     behavior: HitTestBehavior.translucent,
@@ -197,7 +181,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                       showModalBottomSheet(
                                           context: context,
                                           backgroundColor: kDefaultIconLightColor,
-                                          shape: RoundedRectangleBorder(
+                                          shape: const RoundedRectangleBorder(
                                               borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(32),
                                                 topRight: Radius.circular(32),
@@ -205,17 +189,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                           ),
                                           //isScrollControlled: true,
                                           builder: (context) =>
-                                              DraggableScrollableSheet(
-                                                  initialChildSize: 0.5, // Initial height as a percentage of the screen height
-                                                  maxChildSize: 0.8, // Maximum height as a percentage of the screen height
-                                                  minChildSize: 0.2, // Minimum height as a percentage of the screen height
-                                                  expand: false,
-                                                  builder: (BuildContext context, ScrollController scrollController) {
-                                                    return SingleChildScrollView(
-                                                        child: DeliveryInfo()
+                                              const Wrap(
+                                                  children:[DeliveryInfo()]
 
-                                                    );
-                                                  }
                                               )
                                       );
 
@@ -223,23 +199,23 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                   ),
                                 ],
                               ),
-                              ResponsiveText('Rs. 0', fontWeight: FontWeight.w500),
+                              const ResponsiveText('Rs. 0', fontWeight: FontWeight.w500),
                             ],
                           ),
                           SizedBox(height: kVerticalMargin / 2),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              ResponsiveText('Promo', fontWeight: FontWeight.w500),
+                              ResponsiveText(kPromo, fontWeight: FontWeight.w500),
                               Expanded(child: ResponsiveText('(MYFIRSTORDER)', fontWeight: FontWeight.w500)),
                               ResponsiveText('- Rs. 500', fontWeight: FontWeight.w500),
                             ],
                           ),
                           SizedBox(height: kVerticalMargin / 2),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              ResponsiveText('Total', fontWeight: FontWeight.w700),
+                              ResponsiveText(kTotal, fontWeight: FontWeight.w700),
                               ResponsiveText('Rs. 3800', fontWeight: FontWeight.w500),
                             ],
                           ),
@@ -257,9 +233,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ResponsiveText('Payment',fontWeight: FontWeight.w700,fontSize: 16,),
+                            const ResponsiveText(kPayment,fontWeight: FontWeight.w700,fontSize: 16,),
                             Row(children: [
-                              ResponsiveText('Choose payment',fontWeight: FontWeight.w700,fontSize: 16,),
+                              const ResponsiveText(kChoosePayment,fontWeight: FontWeight.w700,fontSize: 16,),
                               SizedBox(width: kHorizontalMargin/4),
                               SvgPicture.asset(
                                   Assets.svgImages.arrowRight
@@ -272,7 +248,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           showModalBottomSheet(
                               context: context,
                               backgroundColor: kDefaultIconLightColor,
-                              shape: RoundedRectangleBorder(
+                              shape: const RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(32),
                                     topRight: Radius.circular(32),
@@ -280,7 +256,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                               ),
                               isScrollControlled: false,
                               builder: (context) =>
-                                  Wrap(children:[PaymentOptionsScreen()])
+                                  const Wrap(children:[PaymentOptionsScreen()])
                           );
 
                         },
@@ -298,15 +274,15 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                ResponsiveText('Schedule Delivery',fontWeight: FontWeight.w700,fontSize: 16,),
+                                const ResponsiveText(kScheduleDelivery,fontWeight: FontWeight.w700,fontSize: 16,),
                                 SizedBox(height: kVerticalMargin/4),
-                                ResponsiveText('Today: Fri, 26 May,2023',fontWeight: FontWeight.w500,fontSize: 16,),
+                                const ResponsiveText('Today: Fri, 26 May,2023',fontWeight: FontWeight.w500,fontSize: 16,),
                                 SizedBox(height: kVerticalMargin/8),
-                                ResponsiveText('As soon as possible',fontWeight: FontWeight.w400,fontSize: 12,textColor: kItemDescriptionColor,),
+                                const ResponsiveText('As soon as possible',fontWeight: FontWeight.w400,fontSize: 12,textColor: kItemDescriptionColor,),
 
                               ],
                             ),
-                            ResponsiveText('Change',textColor: kPrimaryColor,)
+                            ResponsiveText(kChange,textColor: kPrimaryColor,)
                           ],
                         ),
                           onTap: ()
@@ -314,7 +290,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             showModalBottomSheet(
                                 context: context,
                                 backgroundColor: kDefaultIconLightColor,
-                                shape: RoundedRectangleBorder(
+                                shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(32),
                                       topRight: Radius.circular(32),
@@ -322,7 +298,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                 ),
                                 isScrollControlled: false,
                                 builder: (context) =>
-                                    Wrap(children:[ScheduleDeliveryScreen()])
+                                    const Wrap(children:[ScheduleDeliveryScreen()])
                             );
 
                           }
@@ -335,7 +311,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          ResponsiveText('Special Instruction',fontWeight: FontWeight.w700,fontSize: 16),
+                          ResponsiveText(kSpecialInstruction,fontWeight: FontWeight.w700,fontSize: 16),
                           SizedBox(height: kVerticalMargin),
                           Container(
                             height: height*0.1,
@@ -373,8 +349,8 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           height * 0.06), // Set your desired width and height
                     ),
                   ),
-                  child: ResponsiveText(
-                    'Place Order',
+                  child: const ResponsiveText(
+                    kPlaceOrder,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     textColor: kDefaultIconLightColor,
@@ -387,6 +363,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
     );
   }
 }
+
 
 
 
