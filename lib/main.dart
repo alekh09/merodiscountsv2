@@ -5,6 +5,7 @@ import 'package:mero_discountsv2/screens/home_page.dart';
 import 'package:mero_discountsv2/screens/more.dart';
 import 'package:mero_discountsv2/screens/privacy_policy/privacy_policy.dart';
 import 'package:mero_discountsv2/screens/termsandconditions/terms_and_conditions.dart';
+import 'package:mero_discountsv2/screens/track_order/track_order.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/about_vendor.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/vendor_review.dart';
 import 'package:mero_discountsv2/screens/vendorpage/item_description.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const  MaterialApp(
-      home: FAQ(),
+      home: TrackOrder(),
     );
   }
 }
