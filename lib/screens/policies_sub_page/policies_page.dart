@@ -58,6 +58,7 @@ class PoliciesPage extends StatelessWidget {
                           ),
                           ResponsiveText(
                             "Please read this seriously.", 
+                            textColor: Color(kBaseLight), 
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
@@ -103,6 +104,7 @@ class PoliciesPage extends StatelessWidget {
                           ),
                           ResponsiveText(
                             "Another thing to be serious about.", 
+                            textColor: Color(kBaseLight), 
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
