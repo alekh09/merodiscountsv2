@@ -66,6 +66,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       child: GoogleMap(
                         mapType: MapType.normal,
                         initialCameraPosition: _kGooglePlex,
+                        zoomControlsEnabled: false,
                         markers:{
                           const Marker(
                             markerId: MarkerId('OCG Software'),
