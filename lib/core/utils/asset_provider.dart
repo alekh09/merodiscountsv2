@@ -44,6 +44,10 @@ class _AssetsSvgImagesGen {
   String get right_more => '$kSvgImagesPath/right_more.svg';
   String get cross => '$kSvgImagesPath/cross.svg';
   String get phone_office => '$kSvgImagesPath/phone-office.svg';
+  String get lock => '$kSvgImagesPath/lock.svg';
+  String get moon => '$kSvgImagesPath/moon.svg';
+  String get logout => '$kSvgImagesPath/logout.svg';
+  String get updates => '$kSvgImagesPath/updates.svg';
 
 
 
