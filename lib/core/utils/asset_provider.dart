@@ -42,7 +42,8 @@ class _AssetsSvgImagesGen {
   String get edit => '$kSvgImagesPath/edit.svg';
   String get add_user => '$kSvgImagesPath/add_user.svg';
   String get right_more => '$kSvgImagesPath/right_more.svg';
-  // String get customer_service => '$kSvgImagesPath/customer_service.svg';
+  String get cross => '$kSvgImagesPath/cross.svg';
+  String get phone_office => '$kSvgImagesPath/phone-office.svg';
 
 
 
