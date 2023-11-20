@@ -39,9 +39,9 @@ class _AssetsSvgImagesGen {
   String get back_icon => '$kSvgImagesPath/back_icon.svg';
   String get rating_stars => '$kSvgImagesPath/rating_stars.svg';
   String get check_circle => '$kSvgImagesPath/check_circle.svg';
-  // String get app_icon => '$kSvgImagesPath/app_icon.svg';
-  // String get network => '$kSvgImagesPath/network.svg';
-  // String get phone => '$kSvgImagesPath/phone.svg';
+  String get edit => '$kSvgImagesPath/edit.svg';
+  String get add_user => '$kSvgImagesPath/add_user.svg';
+  String get right_more => '$kSvgImagesPath/right_more.svg';
   // String get customer_service => '$kSvgImagesPath/customer_service.svg';
 
 
