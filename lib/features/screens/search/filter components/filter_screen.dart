@@ -177,7 +177,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           for (String rating in ['3', '3.5', '4', '4.5', '5'])
-                            ResponsiveText('$rating', fontWeight: FontWeight.w600,)
+                            ResponsiveText(rating, fontWeight: FontWeight.w600,)
                         ],
                       ),
                     ),

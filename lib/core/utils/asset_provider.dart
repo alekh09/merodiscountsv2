@@ -45,8 +45,10 @@ class _AssetsSvgImagesGen {
   String get arrowsRotate=> '$kSvgImagesPath/arrows-rotate.svg';
   String get locationCrossHairs=> '$kSvgImagesPath/location-crosshairs.svg';
   String get moneyBills=> '$kSvgImagesPath/money-bills.svg';
-
-
+  String get orderConfirm=> '$kSvgImagesPath/order-confirm.svg';
+  String get foodCooking=> '$kSvgImagesPath/food-cooking.svg';
+  String get deliveryBold=> '$kSvgImagesPath/delivery-bold.svg';
+  String get delivered=> '$kSvgImagesPath/delivered.svg';
 
 }
 
