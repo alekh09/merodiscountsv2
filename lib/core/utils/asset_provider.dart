@@ -48,7 +48,8 @@ class _AssetsSvgImagesGen {
   String get moon => '$kSvgImagesPath/moon.svg';
   String get logout => '$kSvgImagesPath/logout.svg';
   String get updates => '$kSvgImagesPath/updates.svg';
-
+  String get thumbs_up => '$kSvgImagesPath/thumbs_up.svg';
+  String get star_half_stroke => '$kSvgImagesPath/star_half_stroke.svg';
 
 
 
