@@ -48,7 +48,24 @@ class _AssetsSvgImagesGen {
   String get orderConfirm=> '$kSvgImagesPath/order-confirm.svg';
   String get foodCooking=> '$kSvgImagesPath/food-cooking.svg';
   String get deliveryBold=> '$kSvgImagesPath/delivery-bold.svg';
+  String get deliveryBold2=> '$kSvgImagesPath/delivery-bold2.svg';
   String get delivered=> '$kSvgImagesPath/delivered.svg';
+  String get deliveryOutline=> '$kSvgImagesPath/delivery-outline.svg';
+  String get dineOutline=> '$kSvgImagesPath/dine-outline.svg';
+  String get dineBold=> '$kSvgImagesPath/dine-bold.svg';
+  String get moreRegular=> '$kSvgImagesPath/more-regular.svg';
+  String get moreSolid=> '$kSvgImagesPath/more-solid.svg';
+  String get orderBold=> '$kSvgImagesPath/order-bold.svg';
+  String get orderThin=> '$kSvgImagesPath/order-thin.svg';
+  String get parcelOutline=> '$kSvgImagesPath/parcel-outline.svg';
+  String get parcelBold=> '$kSvgImagesPath/parcel-bold.svg';
+
+
+
+
+
+
+
 
 }
 

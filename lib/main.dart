@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/screens/my_order/order_details_screen.dart';
-
+import 'package:mero_discountsv2/features/screens/my_order/my_order_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: OrderDetailsScreen(
+      home: MyOrderScreen(
       ),
     );
   }
