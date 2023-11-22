@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mero_discountsv2/screens/about_us/about_us.dart';
+import 'package:mero_discountsv2/screens/change_password/change_password.dart';
 import 'package:mero_discountsv2/screens/home_page.dart';
 import 'package:mero_discountsv2/screens/more.dart';
 import 'package:mero_discountsv2/screens/policies_sub_page/policies_page.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const  MaterialApp(
-      home: SubAboutPage(),
+      home: ChangePassword(),
     );
   }
 }
