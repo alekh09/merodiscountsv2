@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mero_discountsv2/core/constants/color_constants.dart';
+import 'package:mero_discountsv2/core/constants/string_constants.dart';
 import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
@@ -74,8 +75,30 @@ class SubAboutPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 2,),
-              // Divider(thickness: 1,),
               Container(
+              color: Color(kPrimaryWhite),
+              // height: height,
+              child: Column(
+                children: [
+                  
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(context: context,
+                      // backgroundColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                      ),
+                        builder: (context){
+                          return DraggableScrollableSheet(
+                            initialChildSize: 1,
+                            minChildSize: .5,
+                            builder: (BuildContext context, ScrollController scrollController){
+                            return SingleChildScrollView(
+                              child: 
+                              Container(
                 padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
                 // height: 100,
                 width: double.infinity,
@@ -115,6 +138,144 @@ class SubAboutPage extends StatelessWidget {
                   ],
                 )
               ),
+                            );
+                            },
+                          );
+                        }
+                      );
+                    },
+                    child: Container(
+                      //padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin/4),
+                      height: height * 0.35,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) => LayoutBuilder(
+                          builder: (context, constraints) { 
+                            return 
+                            Container(
+                padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+                // height: 100,
+                width: double.infinity,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      Assets.svgImages.phone_office,
+                      height: 20,
+                      width: 20,
+                    ),
+                    SizedBox(width: kHorizontalMargin),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ResponsiveText(
+                            "Contact Us",
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            // textColor: Colors.,
+                          ),
+                          ResponsiveText(
+                            "Any queries? Reach us right away.", 
+                            textColor: Color(kBaseLight), 
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SvgPicture.asset(
+                      Assets.svgImages.right_more,
+                      height: 20,
+                      width: 20,
+                    ),
+                  ],
+                )
+              );
+                    //         Container(
+                    //           width: height * 0.17,
+                    //           height: height *0.1,
+                    //           margin: EdgeInsets.only(left: index == 0? kHorizontalMargin:kHorizontalMargin/2, right: index == 3? kHorizontalMargin: kHorizontalMargin/2, top: kVerticalMargin/2),
+                    //           decoration: BoxDecoration( 
+                    //             // color: Colors.amberAccent,
+                    //             borderRadius: BorderRadius.circular(8),
+                    //           ),
+                    //           child: Column(
+                    //             crossAxisAlignment: CrossAxisAlignment.start,
+                    //             children: [
+                                  
+                                  
+                    //   Expanded(
+                    //   child: Column(
+                    //     crossAxisAlignment: CrossAxisAlignment.start,
+                    //     children: [
+                    //       ResponsiveText(
+                    //         "Contact Us",
+                    //         fontSize: 16,
+                    //         fontWeight: FontWeight.w700,
+                    //         // textColor: Colors.,
+                    //       ),
+                    //       ResponsiveText(
+                    //         "Any queries? Reach us right away.", 
+                    //         textColor: Color(kBaseLight), 
+                    //         fontSize: 14,
+                    //         fontWeight: FontWeight.w400,
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    //             ],
+                    //           ),
+                    //         );
+              //       Container(
+              //   padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+              //   // height: 100,
+              //   width: double.infinity,
+              //   decoration: BoxDecoration(color: Colors.white),
+              //   child: Row(
+              //     children: [
+              //       SvgPicture.asset(
+              //         Assets.svgImages.phone_office,
+              //         height: 20,
+              //         width: 20,
+              //       ),
+              //       SizedBox(width: kHorizontalMargin),
+              //       Expanded(
+              //         child: Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             ResponsiveText(
+              //               "Contact Us",
+              //               fontSize: 16,
+              //               fontWeight: FontWeight.w700,
+              //               // textColor: Colors.,
+              //             ),
+              //             ResponsiveText(
+              //               "Any queries? Reach us right away.", 
+              //               textColor: Color(kBaseLight), 
+              //               fontSize: 14,
+              //               fontWeight: FontWeight.w400,
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //       SvgPicture.asset(
+              //         Assets.svgImages.right_more,
+              //         height: 20,
+              //         width: 20,
+              //       ),
+              //     ],
+              //   )
+              // );
+                          }
+                        ),
+                        // itemCount: 1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
               SizedBox(height: 2,),
               // Divider(thickness: 1,),
               Container(

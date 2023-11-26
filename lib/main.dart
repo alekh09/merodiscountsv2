@@ -9,6 +9,7 @@ import 'package:mero_discountsv2/screens/about_us/sub_about/sub_about.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/about_vendor.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/vendor_review.dart';
 import 'package:mero_discountsv2/screens/vendorpage/item_description.dart';
+import 'package:mero_discountsv2/screens/vendorpage/vendor_demo.dart';
 import 'package:mero_discountsv2/screens/vendorpage/vendor_page.dart';
 
 
