@@ -5,6 +5,13 @@ import '../constants/constant_path.dart';
 class _AssetsImagesGen {
   const _AssetsImagesGen();
 
+
+  String get facebook => '$kImagesPath/facebook.png';
+  String get instagram => '$kImagesPath/instagram.png';
+  String get twitter => '$kImagesPath/twitter.png';
+  String get youtube => '$kImagesPath/youtube.png';
+
+
 }
 
 class _AssetsSvgImagesGen {
@@ -50,6 +57,9 @@ class _AssetsSvgImagesGen {
   String get updates => '$kSvgImagesPath/updates.svg';
   String get thumbs_up => '$kSvgImagesPath/thumbs_up.svg';
   String get star_half_stroke => '$kSvgImagesPath/star_half_stroke.svg';
+  String get at => '$kSvgImagesPath/at.svg';
+  String get phone => '$kSvgImagesPath/phone.svg';
+  String get location => '$kSvgImagesPath/location.svg';
 
 
 
@@ -59,4 +69,9 @@ class Assets {
   Assets._();
   static const images = _AssetsImagesGen();
   static const svgImages = _AssetsSvgImagesGen();
+
+
+  
+
+
 }
