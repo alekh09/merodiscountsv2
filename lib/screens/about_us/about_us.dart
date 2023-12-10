@@ -156,7 +156,7 @@ class AboutUs extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
-                          height: height*0.26,
+                          height: height*0.3,
                           width: height*0.19,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -193,7 +193,7 @@ class AboutUs extends StatelessWidget {
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
-                          height: height*0.26,
+                          height: height*0.3,
                           width: height*0.19,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
@@ -461,87 +461,87 @@ class AboutUs extends StatelessWidget {
                   ],
                 ),
               ),
-              ListView.builder(
-                itemCount: 4,
-                // shrinkWrap: true,
-                // physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (BuildContext context, int index) { 
-                  Container(
-                  // height: height *0.45,
-                  color: Colors.white,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin,),
-                        padding: EdgeInsets.symmetric(
-                        horizontal: kHorizontalMargin,
-                        vertical: kVerticalMargin,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ResponsiveText(
-                                  kOurMotive,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                  textColor: Color(0xff252525),
-                                ),
-                                SizedBox(height: kVerticalMargin/2,),
-                                Container(
-                                  // margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
-                                  height: height*0.26,
-                                  width: height*0.55,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(24), 
-                                    bottomRight: Radius.circular(24)
-                                  ),
-                                  border: Border.all(color: Color(kBaseLight)) 
-                                  ),
-                                  child: Container(
-                                    padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        CachedNetworkImage(
-                                          imageUrl: 'https://merodiscounts.com/frontend/images/shopping.png'),
-                                          SizedBox(height: kVerticalMargin/2,),
-                                        ResponsiveText(
-                                          kCustomerFocused,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w700,
-                                          textColor: Color(kTextIcon),
-                                        ),
-                                        SizedBox(height: kVerticalMargin/2,),
-                                        ResponsiveText(
-                                          "Our business plan is completely focused on the welfare and better shopping experience of the customers.",
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400,
-                                          textColor: Color(kBaseLight),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-                 },
+              // ListView.builder(
+              //   itemCount: 4,
+              //   // shrinkWrap: true,
+              //   // physics: NeverScrollableScrollPhysics(),
+              //   itemBuilder: (BuildContext context, int index) { 
+              //     Container(
+              //     // height: height *0.45,
+              //     color: Colors.white,
+              //     child: Column(
+              //       mainAxisAlignment: MainAxisAlignment.start,
+              //       crossAxisAlignment: CrossAxisAlignment.start,
+              //       children: [
+              //         Container(
+              //           margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin,),
+              //           padding: EdgeInsets.symmetric(
+              //           horizontal: kHorizontalMargin,
+              //           vertical: kVerticalMargin,
+              //           ),
+              //           child: Column(
+              //             crossAxisAlignment: CrossAxisAlignment.start,
+              //             mainAxisAlignment: MainAxisAlignment.start,
+              //             children: [
+              //               Column(
+              //                 mainAxisAlignment: MainAxisAlignment.start,
+              //                 crossAxisAlignment: CrossAxisAlignment.start,
+              //                 children: [
+              //                   ResponsiveText(
+              //                     kOurMotive,
+              //                     fontSize: 16,
+              //                     fontWeight: FontWeight.w700,
+              //                     textColor: Color(0xff252525),
+              //                   ),
+              //                   SizedBox(height: kVerticalMargin/2,),
+              //                   Container(
+              //                     // margin: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
+              //                     height: height*0.26,
+              //                     width: height*0.55,
+              //                     decoration: BoxDecoration(
+              //                       borderRadius: BorderRadius.only(
+              //                       topLeft: Radius.circular(24), 
+              //                       bottomRight: Radius.circular(24)
+              //                     ),
+              //                     border: Border.all(color: Color(kBaseLight)) 
+              //                     ),
+              //                     child: Container(
+              //                       padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin,vertical: kVerticalMargin),
+              //                       child: Column(
+              //                         mainAxisAlignment: MainAxisAlignment.start,
+              //                         crossAxisAlignment: CrossAxisAlignment.start,
+              //                         children: [
+              //                           CachedNetworkImage(
+              //                             imageUrl: 'https://merodiscounts.com/frontend/images/shopping.png'),
+              //                             SizedBox(height: kVerticalMargin/2,),
+              //                           ResponsiveText(
+              //                             kCustomerFocused,
+              //                             fontSize: 16,
+              //                             fontWeight: FontWeight.w700,
+              //                             textColor: Color(kTextIcon),
+              //                           ),
+              //                           SizedBox(height: kVerticalMargin/2,),
+              //                           ResponsiveText(
+              //                             "Our business plan is completely focused on the welfare and better shopping experience of the customers.",
+              //                             fontSize: 12,
+              //                             fontWeight: FontWeight.w400,
+              //                             textColor: Color(kBaseLight),
+              //                           ),
+              //                         ],
+              //                       ),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   );
+              //    },
                 
-              ),
+              // ),
             ],
           ),
         ),
