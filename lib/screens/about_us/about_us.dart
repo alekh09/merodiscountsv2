@@ -12,6 +12,8 @@ import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
 
+  get routeName => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
