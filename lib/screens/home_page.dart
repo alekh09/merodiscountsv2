@@ -12,6 +12,8 @@ import '../core/constants/string_constants.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
 
+  get routeName => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
