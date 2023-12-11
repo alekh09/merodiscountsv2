@@ -17,38 +17,18 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: ResponsiveText(
+          "About Us",
+          fontSize: 18,
+          fontWeight: FontWeight.w700,
+        ),
+        leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () {  },),
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
-              Container(
-                padding:  EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
-                // height: height*0.1,
-                decoration:  BoxDecoration(
-                  color: Color(kPrimaryWhite),
-                  ),
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SvgPicture.asset(
-                          Assets.svgImages.back_icon
-                        ),
-                        SizedBox(width: kVerticalMargin*8),
-                        ResponsiveText(
-                          "About Us",
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: kVerticalMargin),
-                    Divider(height: 2),
-                  ],
-                ),
-              ),
               Container(
                 color: Colors.white,
                 child: Row(
@@ -463,6 +443,7 @@ class AboutUs extends StatelessWidget {
                   ],
                 ),
               ),
+              // ListView(
               // ListView.builder(
               //   itemCount: 4,
               //   // shrinkWrap: true,
