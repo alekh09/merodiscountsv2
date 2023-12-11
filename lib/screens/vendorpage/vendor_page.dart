@@ -198,7 +198,6 @@ class VendorPage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       itemCount: 4,
                       itemBuilder: (context, index) {
-                        
                         return 
                             Container(
                               margin: EdgeInsets.only(left: index == 0? kHorizontalMargin:kHorizontalMargin/2, right: index == 3? kHorizontalMargin: kHorizontalMargin/2, top: kVerticalMargin/2),
@@ -228,8 +227,6 @@ class VendorPage extends StatelessWidget {
                                 ],
                               ),
                             );
-                          
-                       
                       },
                     ),
                 )

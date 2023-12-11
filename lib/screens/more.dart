@@ -9,6 +9,8 @@ import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 class MorePage extends StatelessWidget {
   const MorePage({super.key}); // Fixed the constructor
 
+  get routeName => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
