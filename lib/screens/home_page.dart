@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: kVerticalMargin),
               Row(
                 children: [
-                  ResponsiveText(
+                  const ResponsiveText(
                     "Location",
                     fontWeight: FontWeight.w500,
                   ),
@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: kVerticalMargin / 4),
               Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: ResponsiveText(
                         kLocation,
                         fontSize: 16,
@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                     width: 36,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
-                      color: Color(0xffFFF0EB),
+                      color: const Color(0xffFFF0EB),
                     ),
                     child: SvgPicture.asset(
                       Assets.svgImages.bell,
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: Color(0xffEAEBF0)),
-                  color: Color(0xffFFFFFF),
+                  color: const Color(0xffFFFFFF),
                 ),
                 child: Row(
                   children: [
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
                       width: width * 0.02,
                     ),
                     // SizedBox(width: width * 0.01),
-                    Expanded(
+                    const Expanded(
                       child: ResponsiveText('Search "Momo"',
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: kVerticalMargin),
-              Container(
+              SizedBox(
                 height: height * 0.14,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -124,7 +124,7 @@ class HomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                               ),
                             ),
-                            Flexible(child: ResponsiveText('Momo',
+                            const Flexible(child: ResponsiveText('Momo',
                             fontWeight: FontWeight.w600,
                             textAlign: TextAlign.justify,
                             ),
@@ -138,7 +138,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: kVerticalMargin),
-              Container(
+              SizedBox(
                 height: height * 0.2,
                 width:  width,
                 child: ListView.builder(
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: height * 0.2,
                       width: width * 0.8,
                       child: ClipRRect(
@@ -164,25 +164,23 @@ class HomePage extends StatelessWidget {
                   itemCount: 4,
                 ),
               ),
-             Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ResponsiveText(
-                    kCombo,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    ),
-                    ResponsiveText(
-                      kSee,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ],
-                ),
-              ),
+             const Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                 ResponsiveText(
+                   kCombo,
+                   fontSize: 16,
+                   fontWeight: FontWeight.w700,
+                   ),
+                   ResponsiveText(
+                     kSee,
+                     fontSize: 14,
+                     fontWeight: FontWeight.w400,
+                   ),
+                 ],
+               ),
               SizedBox(height: kHorizontalMargin),
-              Container(
+              SizedBox(
                 height: height * 0.4,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -219,7 +217,7 @@ class HomePage extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Expanded(
+                                const Expanded(
                                   child: ResponsiveText('Combo Newari Set',
                                   fontWeight: FontWeight.w700,
                                   fontSize: 16,
@@ -231,12 +229,12 @@ class HomePage extends StatelessWidget {
                                   height: 14,
                                   width: 14,
                                 ),
-                                ResponsiveText('4.5/5',
+                                const ResponsiveText('4.5/5',
                                 fontWeight: FontWeight.w400,
                                 ),
                               ],
                             ),
-                            ResponsiveText('Aagan Cafe',
+                            const ResponsiveText('Aagan Cafe',
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             ),
@@ -247,8 +245,8 @@ class HomePage extends StatelessWidget {
                                 fontWeight: FontWeight.w700,
                                 textColor: Colors.deepOrange[600],
                                 ),
-                                SizedBox(width:0.9),
-                                ResponsiveText('Rs. 1495',
+                                const SizedBox(width:0.9),
+                                const ResponsiveText('Rs. 1495',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                                 textColor: kPrimaryColor,
@@ -257,7 +255,7 @@ class HomePage extends StatelessWidget {
                                 ),   
                               ],
                             ),
-                            ResponsiveText('Sukuti, Sekuwa, Piro Aalu, Badam Sadeko, Aalu tama, Bhutan, Achar, Buff Chhoila, Peanut Sadeko',
+                            const ResponsiveText('Sukuti, Sekuwa, Piro Aalu, Badam Sadeko, Aalu tama, Bhutan, Achar, Buff Chhoila, Peanut Sadeko',
                             fontSize: 16,
                             maxLines: 1,
                             textOverflow: TextOverflow.ellipsis,
@@ -272,8 +270,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: kHorizontalMargin),
-              Container(
-              child: Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
@@ -290,9 +287,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
               SizedBox(height: kHorizontalMargin/2),
-              Container(
+              SizedBox(
                 height: height * 0.27,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -321,18 +317,18 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: kHorizontalMargin/2,),
-                            ResponsiveText('Chef’s Burger',
+                            const ResponsiveText('Chef’s Burger',
                             fontWeight: FontWeight.w700,
                             fontSize: 16,
                             
                             ),
-                            ResponsiveText('Chabahil, Kathmandu',
+                            const ResponsiveText('Chabahil, Kathmandu',
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             ),
                             Row(
                               children: [
-                                Expanded(
+                                const Expanded(
                                   child: ResponsiveText('30-40 min',
                                   fontSize: 13,
                                   fontWeight: FontWeight.w400,
@@ -344,7 +340,7 @@ class HomePage extends StatelessWidget {
                                   height: 14,
                                   width: 14,
                                 ),
-                                ResponsiveText('4.5/5',
+                                const ResponsiveText('4.5/5',
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   ),
@@ -359,10 +355,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: kVerticalMargin,),
-              Container(
-              child: Row(
+              Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: ResponsiveText(
                       kOffer,
                       fontSize: 18,
@@ -371,14 +366,13 @@ class HomePage extends StatelessWidget {
                       ),
                   ),
                     SizedBox(width: width * 0.29),
-                    ResponsiveText(
+                    const ResponsiveText(
                       kSee,
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),
                   ],
                 ),
-              ),
               SizedBox(height: kHorizontalMargin),
               Container(
                 padding: EdgeInsets.all(kVerticalMargin/2),
@@ -388,7 +382,7 @@ class HomePage extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       height: height *0.1,
                       width: height *0.1,
                       child: ClipRRect(
@@ -404,16 +398,16 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ResponsiveText('Hamro Vegan',
+                          const ResponsiveText('Hamro Vegan',
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
                           ),
-                          ResponsiveText('Kumari Pati, Kathmandu',
+                          const ResponsiveText('Kumari Pati, Kathmandu',
                           fontWeight: FontWeight.w400,
                           ),
                           Row(
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: ResponsiveText('30-40 min',
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
@@ -425,7 +419,7 @@ class HomePage extends StatelessWidget {
                                   height: 14,
                                   width: 14,
                                   ),
-                                  ResponsiveText('4.5/5',
+                                  const ResponsiveText('4.5/5',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                   ),
@@ -434,11 +428,11 @@ class HomePage extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin/2),
                                 decoration: BoxDecoration(
-                                  color: Color(0xffFC520321,
+                                  color: const Color(0xfffc520321,
                                   ).withOpacity(0.13),
                                   borderRadius:BorderRadius.circular(4) 
                                 ),
-                                child: ResponsiveText('Flat 15% off on all items',
+                                child: const ResponsiveText('Flat 15% off on all items',
                                 textColor: Color(0xffE33E02),
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
@@ -451,8 +445,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: kHorizontalMargin),
-              Container(
-              child: Row(
+              const Row(
                 children: [
                   Expanded(
                     child: ResponsiveText(
@@ -467,9 +460,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
               SizedBox(height: kHorizontalMargin),
-              Container(
+              SizedBox(
                 height: height * 0.27,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -499,18 +491,18 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: kHorizontalMargin/2,),
-                            ResponsiveText('Monster Momo',
+                            const ResponsiveText('Monster Momo',
                             fontWeight: FontWeight.w700,
                             fontSize: 16,
                             
                             ),
-                            ResponsiveText('Mid Baneshwor, Kathmandu',
+                            const ResponsiveText('Mid Baneshwor, Kathmandu',
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             ),
                             Row(
                               children: [
-                                Expanded(
+                                const Expanded(
                                   child: ResponsiveText('30-40 min',
                                   fontSize: 13,
                                   fontWeight: FontWeight.w400,
