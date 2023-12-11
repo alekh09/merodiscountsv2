@@ -4,12 +4,16 @@ import 'package:mero_discountsv2/Navigation/route.dart';
 import 'package:mero_discountsv2/screens/about_us/about_us.dart';
 import 'package:mero_discountsv2/screens/home_page.dart';
 import 'package:mero_discountsv2/screens/more.dart';
+
 import 'package:mero_discountsv2/screens/policies_sub_page/policies_page.dart';
 import 'package:mero_discountsv2/screens/profile_page/profile_page.dart';
 import 'package:mero_discountsv2/screens/settings/settings.dart';
 import 'package:mero_discountsv2/screens/about_us/sub_about/sub_about.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/about_vendor.dart';
 import 'package:mero_discountsv2/screens/vendor_about_page/vendor_review.dart';
+
+import 'package:mero_discountsv2/screens/notification/notification_screen.dart';
+
 import 'package:mero_discountsv2/screens/vendorpage/item_description.dart';
 import 'package:mero_discountsv2/screens/vendorpage/vendor_demo.dart';
 import 'package:mero_discountsv2/screens/vendorpage/vendor_page.dart';
@@ -25,8 +29,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: AboutUs()
+    return const  MaterialApp(
+      home: HomePage(),
     );
   }
 }

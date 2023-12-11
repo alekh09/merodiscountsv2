@@ -60,8 +60,10 @@ class _AssetsSvgImagesGen {
   String get at => '$kSvgImagesPath/at.svg';
   String get phone => '$kSvgImagesPath/phone.svg';
   String get location => '$kSvgImagesPath/location.svg';
-
-
+  String get back_arrow => '$kSvgImagesPath/back_arrow.svg';
+  String get coupon_icon => '$kSvgImagesPath/coupon_icon.svg';
+  String get cart_icon => '$kSvgImagesPath/cart_icon.svg';
+  String get info => '$kSvgImagesPath/info.svg';
 
 }
 
