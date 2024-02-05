@@ -14,7 +14,10 @@ const KAbout = "About";
 const Kpolicies = "Policies";
 const Kfaq = "FAQ";
 const Ksetting = "Settings";
-
+const KProfileName = "Bhuwan Shrestha";
+const kPhonenumber = "9863370955";
+const kEmail = "user@gmaail.com";
+const kName = "BS";
 
 const KVendorName = "Makai Restaurant";
 const kVendorAddress = "New Baneshwor, Kathmandu";
@@ -38,6 +41,7 @@ const kAboutRestaurant = "About Restaurant";
 const kItemBurger = "Crunchy Chicken Burger";
 const kBurgerDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas lorem, in rhoncus odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.";
 const kRequired = "Required";
+
 const kOpeningHours= "11am - 10pm |";
 const kOpenNow= "Open Now";
 const kPhotos= "Photos";
@@ -59,3 +63,6 @@ const kBusinessPromotion = "Business Promotion";
 const kCustomerFocused = "Customer Focused";
 const kWhatWeEnsure = "What We Ensure";
 const kOurMotive = "Our Motive";
+const kNotifications = "Notifications";
+const kMarkAllRead = "Mark All Read";
+

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:mero_discountsv2/core/constants/color_constants.dart';
 import 'package:mero_discountsv2/core/constants/string_constants.dart';
 import 'package:mero_discountsv2/core/utils/asset_provider.dart';
 import 'package:mero_discountsv2/core/utils/util.dart';
 import 'package:mero_discountsv2/features/widgets/responsive_text.dart';
 
-
-class MorePage extends StatelessWidget {
-  const MorePage({super.key}); // Fixed the constructor
-
-  get routeName => null;
+class More_page2 extends StatelessWidget {
+  const More_page2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,53 +18,44 @@ class MorePage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin),
-                width: double.infinity,
-                height: 140,
-                decoration: const BoxDecoration(color: Colors.white),
-                child: Column( // Changed to Column to stack widgets vertically
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const ResponsiveText(
-                      KProfile,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18,
-                    ),
-                    // SizedBox(height: 2),
-                    const ResponsiveText(
-                      "Login or Sign Up to view your complete profile.",
-                      fontWeight: FontWeight.w400,
-                      textColor: Color(0xff252525),
-                    ),
-                    // SizedBox(height: kVerticalMargin),
-                    Container(
-                      constraints: const BoxConstraints(maxWidth:400, maxHeight: 100),
-                      child: SizedBox(
-                        width: 450,
-                        height: 43,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            //
-                          },
-                          style: ElevatedButton.styleFrom(
-                            foregroundColor: Colors.white, backgroundColor: const Color(0xffFFF0EB), // Text color
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
+                    padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin),
+                    width: double.infinity,
+                    height: 100,
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: height *0.1,
+                          width: height *0.1,
+                          decoration: BoxDecoration(color: Korange,
+                          borderRadius: BorderRadius.circular(50)
                           ),
-                          child: const Text(
-                            'Continue',
-                            style: TextStyle(fontSize: 16,
-                            color: Color(0xffFC4704)
-                            ),
-                          ),
+                          // child: ResponsiveText(kName),
                         ),
-                      ),
+                        SizedBox(width: kHorizontalMargin), 
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ResponsiveText(
+                              KProfileName,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                            ),
+                            ResponsiveText(
+                              kPhonenumber,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            ResponsiveText(
+                              kEmail,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
+                  ),
+
               const SizedBox(height: 8),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: kHorizontalMargin, vertical: kVerticalMargin),
